@@ -1,14 +1,23 @@
-$(document).ready(function() {
-  $("#formOne").submit(function(event) {
-    var blanks = ["person1", "person2", "animal", "exclamation", "verb", "noun"];
+$(document).ready(function(){
 
-    blanks.forEach(function(blank) {
-      var userInput = $("input#" + blank).val();
-      $("." + blank).text(userInput);
+var elements = ["h1", "p", "img"];
+
+  elements.forEach(function(element){
+    $(element).click(function(){
+      alert("This is a " + element);
+
     });
-
-    $("#story").show();
-
-    event.preventDefault();
   });
 });
+
+// jQuery("h1").click(function() {
+//   alert("This is a header.");
+// });
+//
+// jQuery("p").click(function() {
+//   alert("This is a paragraph.");
+// });
+//
+// jQuery("img").click(function() {
+//   alert("This is an image.");
+// });
